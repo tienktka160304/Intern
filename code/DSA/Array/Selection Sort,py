@@ -1,0 +1,33 @@
+a = []
+
+t = int(input()) # độ dài của mảng
+for x in range(t):
+    a.append(input())
+    
+n = len(a)
+
+for t in range(t):
+    a[t] = int(a[t])
+
+for i in range(n - 1):
+    min_index = i
+    for j in range(i + 1, n):
+        if a[j] < a[min_index]:
+            min_index = j
+    a[i], a[min_index] = a[min_index], a[i]
+    
+print(a)   
+
+# for i in range(n - 1):  # 0 => len - 1
+#     min_index = i  #giả sử min = vị trí đầu
+#     for j in range(i + 1, n):  # tìm từ i + 1 vì loop này sẽ move lowest lên đầu, đến n vì đến max của len
+#         if a[j] < a[min_index]: #lặp cho đến hết vòng
+#             min_index = j      # vị trí min ddc thay thế
+#     lowest_value = a.pop(min_index)      # số nhỏ nhất
+#     a.insert(i, lowest_value)  #i là vị trí nhỏ nhất trong mảng
+# print(a)   
+
+
+    
+            
+            

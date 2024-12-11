@@ -1,0 +1,1 @@
+print(hash_set.contains('Peter'))
